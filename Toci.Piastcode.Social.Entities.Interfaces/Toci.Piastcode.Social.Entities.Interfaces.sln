@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+<<<<<<< HEAD
+VisualStudioVersion = 15.0.26430.13
+=======
+VisualStudioVersion = 15.0.26228.4
+>>>>>>> 0ad4d2ee90eafd7d1911d33e64e981168079a1ee
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Entities.Interfaces", "Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj", "{FC6670A4-5F00-401D-9C90-544BA5F4A46D}"
 EndProject
@@ -17,9 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecogni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecognition.Poc.Front", "Toci.Piastcode.VoiceRecognition.Poc.Front\Toci.Piastcode.VoiceRecognition.Poc.Front.csproj", "{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}"
 EndProject
+<<<<<<< HEAD
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Tests", "Toci.Tests\Toci.Piastcode.Tests.csproj", "{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}"
+=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Plugin", "Toci.Piastcode.Plugin\Toci.Piastcode.Plugin.csproj", "{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.UnitTests", "Toci.Piastcode.UnitTests\Toci.Piastcode.UnitTests.csproj", "{722E7B8F-3669-4953-A213-51E513578500}"
+>>>>>>> 0ad4d2ee90eafd7d1911d33e64e981168079a1ee
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,16 +53,10 @@ Global
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Release|Any CPU.Build.0 = Release|Any CPU
-
-		{6DA0FE57-B547-4400-B603-E38DD6161805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DA0FE57-B547-4400-B603-E38DD6161805}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DA0FE57-B547-4400-B603-E38DD6161805}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DA0FE57-B547-4400-B603-E38DD6161805}.Release|Any CPU.Build.0 = Release|Any CPU
-		{722E7B8F-3669-4953-A213-51E513578500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{722E7B8F-3669-4953-A213-51E513578500}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{722E7B8F-3669-4953-A213-51E513578500}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{722E7B8F-3669-4953-A213-51E513578500}.Release|Any CPU.Build.0 = Release|Any CPU
-
+		{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +69,5 @@ Global
 		{F91F8EE5-31EE-4334-8F3E-CFCA3D1F6C98} = {7FD5EA1A-E84D-4220-8481-9ACC180DCC87}
 		{321CE322-E63E-4F4E-B87C-0B98756475A3} = {F91F8EE5-31EE-4334-8F3E-CFCA3D1F6C98}
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011} = {F91F8EE5-31EE-4334-8F3E-CFCA3D1F6C98}
-		{722E7B8F-3669-4953-A213-51E513578500} = {F91F8EE5-31EE-4334-8F3E-CFCA3D1F6C98}
 	EndGlobalSection
 EndGlobal

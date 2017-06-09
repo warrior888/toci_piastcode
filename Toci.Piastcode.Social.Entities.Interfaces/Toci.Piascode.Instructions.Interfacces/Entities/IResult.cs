@@ -2,8 +2,8 @@
 
 namespace Toci.Piascode.Instructions.Interfacces.Entities
 {
-    public interface IParseResult
+    public interface IResult
     {
-        List<string> ParseResultList { get; set; }
+        List<string> ParseResult { get; set; }
     }
 }
