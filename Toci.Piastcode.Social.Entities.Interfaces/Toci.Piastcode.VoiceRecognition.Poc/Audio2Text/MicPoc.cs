@@ -4,7 +4,9 @@ using Microsoft.Win32.SafeHandles;
 using SpeechLib.Models;
 using SpeechLib.Recognition;
 using System;
+using System.Diagnostics;
 using System.Globalization;
+using System.Speech.Recognition.SrgsGrammar;
 
 namespace Toci.Piastcode.VoiceRecognition.Poc.Audio2Text
 {
@@ -46,10 +48,7 @@ namespace Toci.Piastcode.VoiceRecognition.Poc.Audio2Text
             
         }
 
-        private void SpeechRecognitionEngine_SpeechDetected(object sender, System.Speech.Recognition.SpeechDetectedEventArgs e)
-        {
-            
-        }
+        
 
         private void Sp_NotRecognized(object sender, System.EventArgs e)
         {
@@ -92,9 +91,60 @@ namespace Toci.Piastcode.VoiceRecognition.Poc.Audio2Text
             }
         }
 
+        public void ArbitrarySpeechRecognition()
+        {
+            SpeechRecognitionEngine rec = new SpeechRecognitionEngine();
+            rec.SpeechRecognized += Rec_SpeechRecognized; ;
+            rec.SetInputToDefaultAudioDevice();
+
+            try
+            {
+                rec.LoadGrammar(GetXmlGrammar());              
+
+                rec.SpeechDetected += SpeechRecognitionEngine_SpeechDetected;
+
+                rec.SetInputToDefaultAudioDevice();
+
+                rec.RecognizeAsync(RecognizeMode.Multiple);
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
         private void Rec_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            
+            Debug.WriteLine(e.Result.Text);
+        }
+
+        private void SpeechRecognitionEngine_SpeechDetected(object sender, System.Speech.Recognition.SpeechDetectedEventArgs e)
+        {
+
+        }
+
+        private Grammar GetGrammar()
+        {
+            Choices commandtype = new Choices();
+            commandtype.Add("create");
+            commandtype.Add("public");
+            commandtype.Add("interface");
+            commandtype.Add("class");
+
+            SemanticResultKey srkComtype = new SemanticResultKey("comtype", commandtype.ToGrammarBuilder());
+
+            GrammarBuilder gb = new GrammarBuilder();
+            gb.Culture = System.Globalization.CultureInfo.CreateSpecificCulture("en-GB");
+            gb.Append(srkComtype);
+            gb.AppendDictation();
+
+            return new Grammar(gb);
+        }
+
+        private Grammar GetXmlGrammar()
+        {
+            //StreamReader sr = new StreamReader(@"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.VoiceRecognition.Poc\data\grammar.xml");
+
+            return new Grammar(new SrgsDocument(@"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.VoiceRecognition.Poc\data\grammar.xml")); 
         }
     }
 }

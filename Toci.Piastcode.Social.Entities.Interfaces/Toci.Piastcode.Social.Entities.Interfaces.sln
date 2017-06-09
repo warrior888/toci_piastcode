@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecogni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecognition.Poc.Front", "Toci.Piastcode.VoiceRecognition.Poc.Front\Toci.Piastcode.VoiceRecognition.Poc.Front.csproj", "{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Plugin.Yuriy", "Toci.Piastcode.Plugin.Yuriy\Toci.Piastcode.Plugin.Yuriy.csproj", "{6DA0FE57-B547-4400-B603-E38DD6161805}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Plugin", "Toci.Piastcode.Plugin\Toci.Piastcode.Plugin.csproj", "{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.UnitTests", "Toci.Piastcode.UnitTests\Toci.Piastcode.UnitTests.csproj", "{722E7B8F-3669-4953-A213-51E513578500}"
 EndProject
@@ -47,6 +47,7 @@ Global
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Release|Any CPU.Build.0 = Release|Any CPU
+
 		{6DA0FE57-B547-4400-B603-E38DD6161805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6DA0FE57-B547-4400-B603-E38DD6161805}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DA0FE57-B547-4400-B603-E38DD6161805}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,6 +56,11 @@ Global
 		{722E7B8F-3669-4953-A213-51E513578500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{722E7B8F-3669-4953-A213-51E513578500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{722E7B8F-3669-4953-A213-51E513578500}.Release|Any CPU.Build.0 = Release|Any CPU
+
+		{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

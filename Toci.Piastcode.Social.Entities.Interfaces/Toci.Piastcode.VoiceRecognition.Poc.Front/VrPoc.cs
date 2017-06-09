@@ -19,7 +19,7 @@ namespace Toci.Piastcode.VoiceRecognition.Poc.Front
 
             MicPoc poc = new MicPoc();
 
-            poc.PureSpeechRecognitionTests();
+            poc.ArbitrarySpeechRecognition();
             /*
             Button micStart = new Button();
             micStart.Text = "Start recording";
