@@ -43,10 +43,13 @@
     <Compile Include="Dev\IDevInstructions.cs" />
     <Compile Include="Dev\IInstructions.cs" />
     <Compile Include="Dev\IOperation.cs" />
+    <Compile Include="Entities\IDevHandledInstruction.cs" />
+    <Compile Include="Entities\IHandledInstruction.cs" />
     <Compile Include="Entities\IParseResult.cs" />
     <Compile Include="Entities\ISource.cs" />
     <Compile Include="Entities\ITarget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\IDevInstructionHandler.cs" />
     <Compile Include="Tools\IParser.cs" />
     <Compile Include="Tools\ITargetParser.cs" />
   </ItemGroup>

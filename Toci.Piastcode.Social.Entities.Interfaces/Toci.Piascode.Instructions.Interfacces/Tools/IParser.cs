@@ -2,11 +2,14 @@
 
 namespace Toci.Piascode.Instructions.Interfacces.Tools
 {
-    public interface IGenericParser<TTarget, TSource> where TTarget : ITarget where TSource : ISource
+    public interface IGenericParser<TTarget, TSource, out TRresult> 
+        where TTarget : ITarget 
+        where TSource : ISource
+        where TRresult : IParseResult
     {
         TTarget Target { get; set; }
         TSource Source { get; set; }
 
-        IParseResult Parse(TTarget target, TSource source);
+        TRresult Parse(TTarget target, TSource source);
     }
 }

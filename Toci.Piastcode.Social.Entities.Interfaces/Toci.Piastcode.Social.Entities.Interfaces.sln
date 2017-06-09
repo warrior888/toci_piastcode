@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Entit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Instructions", "Toci.Piastcode.Instructions\Toci.Piastcode.Instructions.csproj", "{DB9DA045-8767-442C-901D-F77D4F0C69E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piascode.Instructions.Interfacces", "Toci.Piascode.Instructions.Interfacces\Toci.Piascode.Instructions.Interfacces.csproj", "{86782432-7656-499A-AA3F-D1BC8A90A81D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piascode.Instructions.Interfaces", "Toci.Piascode.Instructions.Interfacces\Toci.Piascode.Instructions.Interfaces.csproj", "{86782432-7656-499A-AA3F-D1BC8A90A81D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Temporaries", "Temporaries", "{7FD5EA1A-E84D-4220-8481-9ACC180DCC87}"
 EndProject
