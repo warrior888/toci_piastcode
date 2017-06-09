@@ -1,13 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Entities.Interfaces", "Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj", "{FC6670A4-5F00-401D-9C90-544BA5F4A46D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Instructions", "Toci.Piastcode.Instructions\Toci.Piastcode.Instructions.csproj", "{DB9DA045-8767-442C-901D-F77D4F0C69E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piascode.Instructions.Interfacces", "Toci.Piascode.Instructions.Interfacces\Toci.Piascode.Instructions.Interfacces.csproj", "{86782432-7656-499A-AA3F-D1BC8A90A81D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Temporaries", "Temporaries", "{7FD5EA1A-E84D-4220-8481-9ACC180DCC87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VoiceRecognition", "VoiceRecognition", "{F91F8EE5-31EE-4334-8F3E-CFCA3D1F6C98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecognition.Poc", "Toci.Piastcode.VoiceRecognition.Poc\Toci.Piastcode.VoiceRecognition.Poc.csproj", "{321CE322-E63E-4F4E-B87C-0B98756475A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecognition.Poc.Front", "Toci.Piastcode.VoiceRecognition.Poc.Front\Toci.Piastcode.VoiceRecognition.Poc.Front.csproj", "{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +35,21 @@ Global
 		{86782432-7656-499A-AA3F-D1BC8A90A81D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86782432-7656-499A-AA3F-D1BC8A90A81D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86782432-7656-499A-AA3F-D1BC8A90A81D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321CE322-E63E-4F4E-B87C-0B98756475A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321CE322-E63E-4F4E-B87C-0B98756475A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321CE322-E63E-4F4E-B87C-0B98756475A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321CE322-E63E-4F4E-B87C-0B98756475A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F91F8EE5-31EE-4334-8F3E-CFCA3D1F6C98} = {7FD5EA1A-E84D-4220-8481-9ACC180DCC87}
+		{321CE322-E63E-4F4E-B87C-0B98756475A3} = {F91F8EE5-31EE-4334-8F3E-CFCA3D1F6C98}
+		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011} = {F91F8EE5-31EE-4334-8F3E-CFCA3D1F6C98}
 	EndGlobalSection
 EndGlobal
