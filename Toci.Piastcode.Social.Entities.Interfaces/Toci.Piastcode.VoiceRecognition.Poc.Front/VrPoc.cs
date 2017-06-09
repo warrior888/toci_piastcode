@@ -16,13 +16,18 @@ namespace Toci.Piastcode.VoiceRecognition.Poc.Front
         public VrPoc()
         {
             InitializeComponent();
+
+            MicPoc poc = new MicPoc();
+
+            poc.PureSpeechRecognitionTests();
+            /*
             Button micStart = new Button();
             micStart.Text = "Start recording";
             micStart.Size = new Size(80, 20);
             micStart.Location = new Point(20, 20);
             micStart.Click += MicStart_Click;
 
-            Controls.Add(micStart);
+            Controls.Add(micStart);*/
         }
 
         private void MicStart_Click(object sender, EventArgs e)
