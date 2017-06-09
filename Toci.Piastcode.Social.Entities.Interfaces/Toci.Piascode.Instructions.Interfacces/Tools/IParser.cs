@@ -1,12 +1,16 @@
-﻿using Toci.Piascode.Instructions.Interfacces.Entities;
+﻿using System.Collections.Generic;
+using Toci.Piascode.Instructions.Interfacces.Entities;
 
 namespace Toci.Piascode.Instructions.Interfacces.Tools
 {
-    public interface IGenericParser<TTarget, TSource> where TTarget : ITarget where TSource : ISource
+    public interface IParser<TTarget, TSource, out TRresult> 
+        where TTarget : ITarget 
+        where TSource : ISource
+        where TRresult : IResult
     {
         TTarget Target { get; set; }
         TSource Source { get; set; }
-
-        IParseResult Parse(TTarget target, TSource source);
+        TRresult Parse(TTarget target, TSource source);
+        
     }
 }

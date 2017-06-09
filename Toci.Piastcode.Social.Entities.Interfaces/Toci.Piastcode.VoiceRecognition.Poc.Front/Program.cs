@@ -16,7 +16,15 @@ namespace Toci.Piastcode.VoiceRecognition.Poc.Front
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VrPoc());
+            try
+            {
+                Application.Run(new VrPoc());
+            }
+            catch (Exception e)
+            {
+                
+            }
+            
         }
     }
 }

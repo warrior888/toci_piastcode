@@ -1,7 +1,7 @@
 ﻿namespace Toci.Piascode.Instructions.Interfacces.Entities
 {
-    public interface ISource
+    public interface IHandledInstruction
     {
-        string StringSource { get; set; }
+        
     }
 }
