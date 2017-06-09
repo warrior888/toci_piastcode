@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C40FDBC-FD89-4080-BFBC-FEE81AC53A01}</ProjectGuid>
+    <ProjectGuid>{92306387-89E7-47E5-8253-E6F3B4F3E428}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Toci.Piastcode.Social.Tools</RootNamespace>
-    <AssemblyName>Toci.Piastcode.Social.Tools</AssemblyName>
+    <RootNamespace>Toci.Piastcode.Social.Sockets.Interfaces</RootNamespace>
+    <AssemblyName>Toci.Piastcode.Social.Sockets.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="protobuf-net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\protobuf-net.2.2.1\lib\net40\protobuf-net.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,21 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProjectSync\DirectoryManager.cs" />
+    <Compile Include="Connection\ISocketConnection.cs" />
+    <Compile Include="ISocketBase.cs" />
+    <Compile Include="ISocketFrameManager.cs" />
+    <Compile Include="ISocketProjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj">
       <Project>{fc6670a4-5f00-401d-9c90-544ba5f4a46d}</Project>
       <Name>Toci.Piastcode.Social.Entities.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Toci.Piastcode.Social.Tools.Interfaces\Toci.Piastcode.Social.Tools.Interfaces.csproj">
-      <Project>{c1115ffe-6885-4fb9-9f9e-4ee88178a864}</Project>
-      <Name>Toci.Piastcode.Social.Tools.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

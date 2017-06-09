@@ -1,11 +1,11 @@
 ﻿namespace Toci.Piastcode.Social.Entities.Interfaces
 {
-    public interface IFrame
+    public interface IFrame : IData
     {
         IUser User { get; set; }
 
         IFile File { get; set; }
 
-        IData Data { get; set; }
+        IText Data { get; set; }
     }
 }

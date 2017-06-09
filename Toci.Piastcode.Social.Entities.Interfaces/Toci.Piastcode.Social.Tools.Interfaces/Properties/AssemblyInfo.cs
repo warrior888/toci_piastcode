@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Toci.Piastcode.Social.Entities")]
+[assembly: AssemblyTitle("Toci.Piastcode.Social.Tools.Interfaces")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Toci.Piastcode.Social.Entities")]
+[assembly: AssemblyProduct("Toci.Piastcode.Social.Tools.Interfaces")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("77e05e9f-d76d-4af0-997c-e1a98455243b")]
+[assembly: Guid("c1115ffe-6885-4fb9-9f9e-4ee88178a864")]
 
 // Version information for an assembly consists of the following four values:
 //

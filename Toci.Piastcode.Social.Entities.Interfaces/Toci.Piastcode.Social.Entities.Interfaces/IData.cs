@@ -2,8 +2,6 @@
 {
     public interface IData
     {
-        string Text { get; set; }
-
-        int CaretPosition { get; set; }
+        
     }
 }

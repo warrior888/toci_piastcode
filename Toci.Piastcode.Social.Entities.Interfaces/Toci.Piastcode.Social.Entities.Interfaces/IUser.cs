@@ -1,4 +1,6 @@
-﻿namespace Toci.Piastcode.Social.Entities.Interfaces
+﻿using System.Net.Sockets;
+
+namespace Toci.Piastcode.Social.Entities.Interfaces
 {
     public interface IUser
     {

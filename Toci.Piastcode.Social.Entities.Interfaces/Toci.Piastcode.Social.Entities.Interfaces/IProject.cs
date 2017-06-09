@@ -1,6 +1,6 @@
 ﻿namespace Toci.Piastcode.Social.Entities.Interfaces
 {
-    public interface IDirectory
+    public interface IProject : IData
     {
         string SourcePath { get; set; }
         
