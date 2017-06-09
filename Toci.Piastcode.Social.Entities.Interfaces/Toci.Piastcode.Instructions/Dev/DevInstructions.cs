@@ -12,5 +12,6 @@ namespace Toci.Piastcode.Instructions.Dev
         public string EntityType { get; set; }
         public string Name { get; set; }
         public Action<THandledInstruction> CustomCallback { get; set; }
+        public IOperation Operation { get; set; }
     }
 }
