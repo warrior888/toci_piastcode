@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Entities.Interfaces", "Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj", "{FC6670A4-5F00-401D-9C90-544BA5F4A46D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Tools", "Toci.Piastcode.Social.Tools\Toci.Piastcode.Social.Tools.csproj", "{5C40FDBC-FD89-4080-BFBC-FEE81AC53A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FC6670A4-5F00-401D-9C90-544BA5F4A46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC6670A4-5F00-401D-9C90-544BA5F4A46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC6670A4-5F00-401D-9C90-544BA5F4A46D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C40FDBC-FD89-4080-BFBC-FEE81AC53A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C40FDBC-FD89-4080-BFBC-FEE81AC53A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C40FDBC-FD89-4080-BFBC-FEE81AC53A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C40FDBC-FD89-4080-BFBC-FEE81AC53A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
