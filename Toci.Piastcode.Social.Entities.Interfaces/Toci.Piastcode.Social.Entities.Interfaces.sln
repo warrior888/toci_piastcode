@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Entities.Interfaces", "Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj", "{FC6670A4-5F00-401D-9C90-544BA5F4A46D}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecognition.Poc", "Toci.Piastcode.VoiceRecognition.Poc\Toci.Piastcode.VoiceRecognition.Poc.csproj", "{321CE322-E63E-4F4E-B87C-0B98756475A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecognition.Poc.Front", "Toci.Piastcode.VoiceRecognition.Poc.Front\Toci.Piastcode.VoiceRecognition.Poc.Front.csproj", "{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Tests", "Toci.Tests\Toci.Piastcode.Tests.csproj", "{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

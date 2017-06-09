@@ -2,6 +2,6 @@
 {
     public interface ISource
     {
-        string Source { get; set; }
+        string StringSource { get; set; }
     }
 }
