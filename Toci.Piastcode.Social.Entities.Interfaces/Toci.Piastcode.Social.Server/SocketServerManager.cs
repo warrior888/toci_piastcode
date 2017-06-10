@@ -35,6 +35,7 @@ namespace Toci.Piastcode.Social.Server
 
         public void StartServer()
         {
+            Console.WriteLine($"[{DateTime.Now}] Server started.");
             Task task = new Task(AcceptConnection);
             task.Start();
 
@@ -89,7 +90,7 @@ namespace Toci.Piastcode.Social.Server
                         item = Serializer.Deserialize<ProjectItem>(ms);
 
                         // Pseudo Logger 
-                        Console.WriteLine("Received data from " + client.Name + ", modificationType: " + item.ItemModificationType);
+                        Console.WriteLine($"[{DateTime.Now}] Received data from {client.Name} , modificationType: {item.ItemModificationType}");
                         Map[item.ItemModificationType](item, client);
                     }
 
@@ -98,7 +99,8 @@ namespace Toci.Piastcode.Social.Server
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error, exception: " + ex);
+                    Console.WriteLine($"[{DateTime.Now}] {ex.Message}, Name: {client.Name}");
+                    Clients.Remove(client);
                     break;
                 }
             }
@@ -129,6 +131,14 @@ namespace Toci.Piastcode.Social.Server
                 Socket accepted = socket.Accept();
                 SocketUserConnection userConnection = new SocketUserConnection(accepted);
                 var user = userConnection.ReceiveData();
+
+                // Logger
+                Console.WriteLine($"[{DateTime.Now}] User connected. Name: {user.Name}");
+                Console.Write($"[{DateTime.Now}] Connected users: ");
+                foreach (var tmpClient in Clients)
+                {
+                    Console.Write($"{tmpClient.Name}, ");
+                }
 
                 IClient client = new Entities.Client
                 {
