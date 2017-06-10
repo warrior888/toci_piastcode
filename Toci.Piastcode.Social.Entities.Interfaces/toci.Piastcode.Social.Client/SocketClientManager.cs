@@ -10,6 +10,7 @@ using Toci.Piastcode.Social.Client.Interfaces;
 using Toci.Piastcode.Social.Entities;
 using Toci.Piastcode.Social.Entities.Interfaces;
 using Toci.Piastcode.Social.Sockets;
+using Toci.Piastcode.Social.Client.Implementations;
 
 namespace Toci.Piastcode.Social.Client
 {
@@ -45,7 +46,7 @@ namespace Toci.Piastcode.Social.Client
                 IItem item;
                 using (MemoryStream ms = new MemoryStream(formatted))
                 {
-                    item = Serializer.Deserialize<IItem>(ms);
+                    item = Serializer.Deserialize<ProjectItem>(ms);
 
 
                     if (item.ItemModificationType == ModificationType.Add)
