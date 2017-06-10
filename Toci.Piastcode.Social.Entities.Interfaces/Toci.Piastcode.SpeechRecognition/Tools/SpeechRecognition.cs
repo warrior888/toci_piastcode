@@ -20,6 +20,12 @@ namespace Toci.Piastcode.SpeechRecognition.Tools
             SREngine.LoadGrammar(GrammarManager.GetGrammar(GrammarSource));
             SREngine.RecognizeAsync(RecognizeMode.Multiple);
             SREngine.SpeechRecognized += SREngine_SpeechRecognized;
+            SREngine.SpeechDetected += SREngine_SpeechDetected;
+        }
+
+        private void SREngine_SpeechDetected(object sender, SpeechDetectedEventArgs e)
+        {
+           
         }
 
         protected virtual void SREngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)

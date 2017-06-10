@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\GrammarManager.cs" />
     <Compile Include="Tools\SpeechRecognition.cs" />
+    <Compile Include="Tools\SpeechRecognitionManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toci.Piastcode.SpeechRecognition.Interfaces\Toci.Piastcode.SpeechRecognition.Interfaces.csproj">

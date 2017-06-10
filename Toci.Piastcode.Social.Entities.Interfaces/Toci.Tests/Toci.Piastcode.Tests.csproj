@@ -51,6 +51,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\LGBSPLbzapart.cs" />
+    <Compile Include="..\..\..\..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\manager.cs" />
+    <Compile Include="..\..\..\..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\server.cs" />
+    <Compile Include="..\..\..\..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\socket.cs" />
+    <Compile Include="..\..\..\..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\socket.cs" />
     <Compile Include="InstructionTest\CreateFileTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerClientTests\ServerTest.cs" />

@@ -7,7 +7,7 @@ namespace Toci.Piascode.Instructions.Interfacces.Tools
     {
         IDevInstructions<IDevHandledInstruction> DevInstruction { get; set; }
         IDevHandledInstruction DevHandledInstruction { get; set; }
-        void CommandDriver(IResult result);
-        void CreateDevHandledInstruction(IDevInstructions<IDevHandledInstruction> devInstruction);
+        IDevInstructions<IDevHandledInstruction> CommandDriver(IResult result);
+        IDevHandledInstruction CreateDevHandledInstruction(IDevInstructions<IDevHandledInstruction> devInstruction);
     }
 }

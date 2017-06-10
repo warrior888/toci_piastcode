@@ -11,7 +11,6 @@ namespace Toci.Piastcode.Instructions.Dev
         public string AccessModifier { get; set; }
         public string EntityType { get; set; }
         public string Name { get; set; }
-        public Action<THandledInstruction> CustomCallback { get; set; }
         public new IOperation Operation { get; set; }
     }
 }

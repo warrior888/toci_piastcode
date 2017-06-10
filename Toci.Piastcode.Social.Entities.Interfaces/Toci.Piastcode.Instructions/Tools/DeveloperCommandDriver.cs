@@ -10,7 +10,7 @@ namespace Toci.Piastcode.Instructions.Tools
     {
         public IDevInstructions<IDevHandledInstruction> DevInstruction { get; set; }
         public IDevHandledInstruction DevHandledInstruction { get; set; }
-        public void CommandDriver(IResult result)
+        public IDevInstructions<IDevHandledInstruction> CommandDriver(IResult result)
         {
             DevInstruction = new DevInstructions<IDevHandledInstruction>
             {
@@ -18,12 +18,18 @@ namespace Toci.Piastcode.Instructions.Tools
                 EntityType = result.ParseResult[2],
                 Name = result.ParseResult[3]
             };
+
+            return DevInstruction;
         }
 
-        public void CreateDevHandledInstruction(IDevInstructions<IDevHandledInstruction> devInstruction)
+        public IDevHandledInstruction CreateDevHandledInstruction(IDevInstructions<IDevHandledInstruction> devInstruction)
         {
             DevHandledInstruction = new DevHandledInstruction();
+
             DevHandledInstruction.FileContent += (devInstruction.AccessModifier + " " + devInstruction.EntityType + " " + devInstruction.Name + "{}");
+            DevHandledInstruction.FileName = devInstruction.Name;
+
+            return DevHandledInstruction;
         }
 
         public void InvokeDevInstruction(IDevInstructions<IDevHandledInstruction> instruction)
