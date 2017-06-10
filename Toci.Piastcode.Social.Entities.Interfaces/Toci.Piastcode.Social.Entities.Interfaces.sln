@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Entit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Server", "Toci.Piastcode.Social.Server\Toci.Piastcode.Social.Server.csproj", "{13BB3173-2BFF-41E1-8B06-F73C4457B155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "toci.Piastcode.Social.Client", "toci.Piastcode.Social.Client\toci.Piastcode.Social.Client.csproj", "{CDC32FE2-61BF-4D51-B8E7-569D06A22FD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Client", "toci.Piastcode.Social.Client\Toci.Piastcode.Social.Client.csproj", "{CDC32FE2-61BF-4D51-B8E7-569D06A22FD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Social.Sockets", "Toci.Piastcode.Social.Sockets\Toci.Piastcode.Social.Sockets.csproj", "{E18E9834-6F28-48B6-81C8-A7AA4CC365C1}"
 EndProject
