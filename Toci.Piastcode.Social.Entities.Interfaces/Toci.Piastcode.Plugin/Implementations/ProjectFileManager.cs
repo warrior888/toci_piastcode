@@ -1,11 +1,7 @@
-﻿using Microsoft.Build.Evaluation;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
+using Microsoft.Build.Evaluation;
 using Toci.Piastcode.Plugin.Interfaces;
+using Toci.Piastcode.Social.Client.Interfaces;
 
 namespace Toci.Piastcode.Plugin.Implementations
 {

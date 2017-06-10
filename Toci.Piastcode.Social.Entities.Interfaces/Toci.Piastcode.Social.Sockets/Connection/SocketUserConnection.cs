@@ -6,9 +6,9 @@ using Toci.Piastcode.Social.Entities.Interfaces;
 
 namespace Toci.Piastcode.Social.Sockets.Connection
 {
-    public class SocketProjectConnection : SocketConnection<byte[], IProject>
+    public class SocketUserConnection : SocketConnection<byte[], IUser>
     {
-        public SocketProjectConnection(Socket socket) : base(socket)
+        public SocketUserConnection(Socket socket) : base(socket)
         {
         }
 
@@ -17,9 +17,9 @@ namespace Toci.Piastcode.Social.Sockets.Connection
             socket.Send(data);
         }
 
-        public override IProject ReceiveData()
+        public override IUser ReceiveData()
         {
-            IProject project = new Project();
+            IUser user = new User();
 
             byte[] buffer = new byte[socket.SendBufferSize];
             int bytesRead = socket.Receive(buffer);
@@ -33,9 +33,9 @@ namespace Toci.Piastcode.Social.Sockets.Connection
 
             MemoryStream ms = new MemoryStream(formatted);
 
-            project = Serializer.Deserialize<Project>(ms);
+            user = Serializer.Deserialize<User>(ms);
 
-            return project;
+            return user;
         }
     }
 }

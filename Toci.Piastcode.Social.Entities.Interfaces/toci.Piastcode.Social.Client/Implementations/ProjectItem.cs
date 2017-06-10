@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Toci.Piastcode.Plugin.Interfaces;
+﻿using ProtoBuf;
+using Toci.Piastcode.Social.Client.Interfaces;
 
-namespace Toci.Piastcode.Plugin.Implementations
+namespace Toci.Piastcode.Social.Client.Implementations
 {
+    [ProtoContract]
     public class ProjectItem : IProjectItem
     {
         private string _projectPath; //sln
@@ -20,6 +17,7 @@ namespace Toci.Piastcode.Plugin.Implementations
             _content = content;
         }
 
+        [ProtoMember(1)]
        public string ProjectPath
         {
             get
@@ -31,6 +29,8 @@ namespace Toci.Piastcode.Plugin.Implementations
                 _projectPath = value;
             }
         }
+
+        [ProtoMember(2)]
         public string FilePath
         {
             get
@@ -42,6 +42,8 @@ namespace Toci.Piastcode.Plugin.Implementations
                 _filePath = value;
             }
         }
+
+        [ProtoMember(3)]
         public string Content
         {
             get
@@ -53,5 +55,7 @@ namespace Toci.Piastcode.Plugin.Implementations
                 _content = value;
             }
         }
+        [ProtoMember(4)]
+        public ModificationType ItemModificationType { get; set; }
     }
 }

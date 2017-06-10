@@ -2,6 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Toci.Piastcode.Social.Server;
 
 namespace Toci.Tests.ServerClientTests
 {
@@ -61,9 +62,22 @@ namespace Toci.Tests.ServerClientTests
         [TestMethod]
         public void TestMethod1()
         {
-            //
-            // TODO: Add test logic here
-            //
+            const string ipAddress = "127.0.0.1";
+            const int port = 25016;
+            SocketServerManager server = new SocketServerManager(ipAddress, port);
+
+            server.StartServer();
+            //var data = Encoding.ASCII.GetBytes("Hello from the server!");
+
+            //while (true)
+            //{
+            //    if (server.Clients.Count >= 3)
+            //    {
+            //        server.BroadcastData(data);
+            //        break;
+            //    }
+            //}
+
         }
     }
 }

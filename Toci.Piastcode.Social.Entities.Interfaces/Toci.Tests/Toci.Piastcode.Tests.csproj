@@ -37,6 +37,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.1.11\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
@@ -75,6 +78,14 @@
     <ProjectReference Include="..\Toci.Piastcode.Social.Server\Toci.Piastcode.Social.Server.csproj">
       <Project>{13bb3173-2bff-41e1-8b06-f73c4457b155}</Project>
       <Name>Toci.Piastcode.Social.Server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.Social.Sockets.Interfaces\Toci.Piastcode.Social.Sockets.Interfaces.csproj">
+      <Project>{92306387-89e7-47e5-8253-e6f3b4f3e428}</Project>
+      <Name>Toci.Piastcode.Social.Sockets.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.Social.Sockets\Toci.Piastcode.Social.Sockets.csproj">
+      <Project>{e18e9834-6f28-48b6-81c8-a7aa4cc365c1}</Project>
+      <Name>Toci.Piastcode.Social.Sockets</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
