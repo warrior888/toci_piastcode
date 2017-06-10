@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Toci.Piastcode.VoiceRecognition.Poc.Front</RootNamespace>
-    <AssemblyName>Toci.Piastcode.VoiceRecognition.Poc.Front</AssemblyName>
+    <ProjectGuid>{480B3504-6497-43D8-9F9F-CCBBC5F230C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Toci.Piastcode.SpeechRecognition</RootNamespace>
+    <AssemblyName>Toci.Piastcode.SpeechRecognition</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,60 +32,26 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VrPoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VrPoc.Designer.cs">
-      <DependentUpon>VrPoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Entities\GrammarSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="Tools\GrammarManager.cs" />
+    <Compile Include="Tools\SpeechRecognition.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toci.Piastcode.SpeechRecognition.Interfaces\Toci.Piastcode.SpeechRecognition.Interfaces.csproj">
       <Project>{7247629d-acee-4164-93a4-68f8a8b2ed85}</Project>
       <Name>Toci.Piastcode.SpeechRecognition.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Toci.Piastcode.SpeechRecognition\Toci.Piastcode.SpeechRecognition.csproj">
-      <Project>{480b3504-6497-43d8-9f9f-ccbbc5f230c0}</Project>
-      <Name>Toci.Piastcode.SpeechRecognition</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Toci.Piastcode.VoiceRecognition.Poc\Toci.Piastcode.VoiceRecognition.Poc.csproj">
-      <Project>{321ce322-e63e-4f4e-b87c-0b98756475a3}</Project>
-      <Name>Toci.Piastcode.VoiceRecognition.Poc</Name>
-    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

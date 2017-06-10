@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="protobuf-net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.2.1\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +47,14 @@
     <Compile Include="SocketServerManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Toci.Piastcode.Common\Toci.Piastcode.Common.csproj">
+      <Project>{702ef088-0685-452a-a300-27dd033b4aa6}</Project>
+      <Name>Toci.Piastcode.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.Plugin\Toci.Piastcode.Plugin.csproj">
+      <Project>{4d1e0a60-0de2-4f58-a684-5ea2bdfc9455}</Project>
+      <Name>Toci.Piastcode.Plugin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj">
       <Project>{fc6670a4-5f00-401d-9c90-544ba5f4a46d}</Project>
       <Name>Toci.Piastcode.Social.Entities.Interfaces</Name>
@@ -60,6 +71,9 @@
       <Project>{e18e9834-6f28-48b6-81c8-a7aa4cc365c1}</Project>
       <Name>Toci.Piastcode.Social.Sockets</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

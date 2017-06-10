@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using ProtoBuf;
+using Toci.Piastcode.Common.Implementations;
+using Toci.Piastcode.Common.Interfaces;
 using Toci.Piastcode.Social.Entities;
 using Toci.Piastcode.Social.Entities.Interfaces;
 using Toci.Piastcode.Social.Sockets;
@@ -13,8 +16,11 @@ namespace toci.Piastcode.Social.Client
 {
     public class SocketClientManager : SocketClientBase
     {
-        public SocketClientManager(string ipAddress, int port) : base(ipAddress, port)
+        protected Dictionary<ModificationType, Action<IItem>> Map;
+
+        public SocketClientManager(string ipAddress, int port, Dictionary<ModificationType, Action<IItem>> map) : base(ipAddress, port)
         {
+            Map = map;
         }
 
         public void StartClient()
@@ -51,6 +57,40 @@ namespace toci.Piastcode.Social.Client
             }
 
             Console.WriteLine(Encoding.ASCII.GetString(formatted));
+            }
+        }
+
+        public virtual void BroadCastFile(IItem projectItem)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                Serializer.Serialize(ms, projectItem);
+                socket.Send(ms.ToArray());
+            }
+        }
+
+        protected void Listen()
+        {
+            byte[] buffer = new byte[socket.SendBufferSize];
+            int bytesRead = socket.Receive(buffer);
+
+            byte[] formatted = new byte[bytesRead];
+
+            for (int i = 0; i < bytesRead; i++)
+            {
+                formatted[i] = buffer[i];
+            }
+
+            IItem item;
+            using (MemoryStream ms = new MemoryStream(formatted))
+            {
+                item = Serializer.Deserialize<IItem>(ms);
+
+
+                if (item.ItemModificationType == ModificationType.Add)
+                {
+                    AddFile(Map[ModificationType.Add], (IProjectItem)item);
+                }
             }
         }
 

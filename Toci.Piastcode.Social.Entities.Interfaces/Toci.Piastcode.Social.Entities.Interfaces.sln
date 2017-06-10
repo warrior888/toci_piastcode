@@ -32,14 +32,28 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecognition.Poc", "Toci.Piastcode.VoiceRecognition.Poc\Toci.Piastcode.VoiceRecognition.Poc.csproj", "{321CE322-E63E-4F4E-B87C-0B98756475A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.VoiceRecognition.Poc.Front", "Toci.Piastcode.VoiceRecognition.Poc.Front\Toci.Piastcode.VoiceRecognition.Poc.Front.csproj", "{44B2F4DE-B1C1-4A3F-A8FF-30E6A518D011}"
+	ProjectSection(ProjectDependencies) = postProject
+		{480B3504-6497-43D8-9F9F-CCBBC5F230C0} = {480B3504-6497-43D8-9F9F-CCBBC5F230C0}
+		{7247629D-ACEE-4164-93A4-68F8A8B2ED85} = {7247629D-ACEE-4164-93A4-68F8A8B2ED85}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Tests", "Toci.Tests\Toci.Piastcode.Tests.csproj", "{C67A6FD6-9C12-47B2-94B3-D9619E290EAC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Plugin", "Toci.Piastcode.Plugin\Toci.Piastcode.Plugin.csproj", "{4D1E0A60-0DE2-4F58-A684-5EA2BDFC9455}"
+	ProjectSection(ProjectDependencies) = postProject
+		{480B3504-6497-43D8-9F9F-CCBBC5F230C0} = {480B3504-6497-43D8-9F9F-CCBBC5F230C0}
+		{7247629D-ACEE-4164-93A4-68F8A8B2ED85} = {7247629D-ACEE-4164-93A4-68F8A8B2ED85}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Instructions", "Toci.Piastcode.Instructions\Toci.Piastcode.Instructions.csproj", "{DB9DA045-8767-442C-901D-F77D4F0C69E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Test.Console", "Toci.Piastcode.Test.Console\Toci.Piastcode.Test.Console.csproj", "{1AD49947-985D-4574-B966-95BA906BB997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.SpeechRecognition.Interfaces", "Toci.Piastcode.SpeechRecognition.Interfaces\Toci.Piastcode.SpeechRecognition.Interfaces.csproj", "{7247629D-ACEE-4164-93A4-68F8A8B2ED85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.SpeechRecognition", "Toci.Piastcode.SpeechRecognition\Toci.Piastcode.SpeechRecognition.csproj", "{480B3504-6497-43D8-9F9F-CCBBC5F230C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Piastcode.Common", "Toci.Piastcode.Common\Toci.Piastcode.Common.csproj", "{702EF088-0685-452A-A300-27DD033B4AA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -115,6 +129,18 @@ Global
 		{1AD49947-985D-4574-B966-95BA906BB997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AD49947-985D-4574-B966-95BA906BB997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AD49947-985D-4574-B966-95BA906BB997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7247629D-ACEE-4164-93A4-68F8A8B2ED85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7247629D-ACEE-4164-93A4-68F8A8B2ED85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7247629D-ACEE-4164-93A4-68F8A8B2ED85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7247629D-ACEE-4164-93A4-68F8A8B2ED85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480B3504-6497-43D8-9F9F-CCBBC5F230C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480B3504-6497-43D8-9F9F-CCBBC5F230C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480B3504-6497-43D8-9F9F-CCBBC5F230C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480B3504-6497-43D8-9F9F-CCBBC5F230C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702EF088-0685-452A-A300-27DD033B4AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702EF088-0685-452A-A300-27DD033B4AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702EF088-0685-452A-A300-27DD033B4AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702EF088-0685-452A-A300-27DD033B4AA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

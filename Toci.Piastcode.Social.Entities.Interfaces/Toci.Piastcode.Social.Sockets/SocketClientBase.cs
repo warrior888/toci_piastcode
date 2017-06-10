@@ -1,5 +1,7 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Sockets;
+using Toci.Piastcode.Common.Interfaces;
 
 namespace Toci.Piastcode.Social.Sockets
 {
@@ -15,6 +17,11 @@ namespace Toci.Piastcode.Social.Sockets
             IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse(IpAddress), Port);
             socket = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
             socket.Connect(endPoint);
+        }
+
+        public void AddFile(Action<IProjectItem> action, IProjectItem projectItem)
+        {
+            action(projectItem);
         }
     }
 }

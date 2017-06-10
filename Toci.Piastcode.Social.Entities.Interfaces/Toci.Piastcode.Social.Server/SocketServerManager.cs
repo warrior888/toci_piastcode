@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using ProtoBuf;
+using Toci.Piastcode.Common.Interfaces;
 using Toci.Piastcode.Social.Entities;
 using Toci.Piastcode.Social.Entities.Interfaces;
 using Toci.Piastcode.Social.Sockets;
@@ -16,12 +19,17 @@ namespace Toci.Piastcode.Social.Server
     {
         public static object LockObject = new object();
 
-        public List<IClient> Clients;
+        protected List<IClient> Clients;
+
+        protected Dictionary<ModificationType, Action<IItem, IClient>> Map; 
 
         public SocketServerManager(string ipAddress, int port) : base(ipAddress, port)
         {
             Clients = new List<IClient>();
-            nameCount = 0;
+            Map = new Dictionary<ModificationType, Action<IItem, IClient>>
+            {
+                {ModificationType.Add, BroadcastFiles }
+            };
         }
 
         public void StartServer()
@@ -72,7 +80,18 @@ namespace Toci.Piastcode.Social.Server
                     {
                         formatted[i] = buffer[i];
                     }
-                    BroadcastData(formatted, client);
+
+                    IItem item;
+
+                    using (MemoryStream ms = new MemoryStream(formatted))
+                    {
+                        item = Serializer.Deserialize<IItem>(ms);
+
+                        Map[item.ItemModificationType](item, client);
+                    }
+
+                    
+                        //BroadcastData(formatted, client);
                 }
                 catch (Exception ex)
                 {
@@ -82,7 +101,22 @@ namespace Toci.Piastcode.Social.Server
             }
         }
 
-        public static int nameCount;
+        protected void BroadcastFiles(IItem projectItem, IClient filteredClient = null)
+        {
+            foreach (var client in Clients)
+            {
+                if (filteredClient != null && filteredClient.Name == client.Name)
+                {
+                    continue;
+                }
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    Serializer.Serialize(ms, projectItem);
+                    client.socket.Send(ms.ToArray());
+                } 
+            }
+        }
 
         public void AcceptConnection()
         {
@@ -93,10 +127,9 @@ namespace Toci.Piastcode.Social.Server
                 SocketUserConnection userConnection = new SocketUserConnection(accepted);
                 var user = userConnection.ReceiveData();
 
-                string[] names = {"Kunegunda", "Bdzigost", "Msciwuj", "Niebylec", "Sobiesad", "Filolog"};
                 IClient client = new Client
                 {
-                    Name = names[nameCount],
+                    Name = user.Name,
                     socket = accepted,
                 };
                 

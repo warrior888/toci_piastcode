@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CDC32FE2-61BF-4D51-B8E7-569D06A22FD7}</ProjectGuid>
+    <ProjectGuid>{702EF088-0685-452A-A300-27DD033B4AA6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>toci.Piastcode.Social.Client</RootNamespace>
-    <AssemblyName>toci.Piastcode.Social.Client</AssemblyName>
+    <RootNamespace>Toci.Piastcode.Common</RootNamespace>
+    <AssemblyName>Toci.Piastcode.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -35,7 +35,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,30 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementations\ProjectItem.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IProjectItem.cs" />
+    <Compile Include="Interfaces\ModificationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SocketClientManager.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Toci.Piastcode.Common\Toci.Piastcode.Common.csproj">
-      <Project>{702ef088-0685-452a-a300-27dd033b4aa6}</Project>
-      <Name>Toci.Piastcode.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj">
-      <Project>{fc6670a4-5f00-401d-9c90-544ba5f4a46d}</Project>
-      <Name>Toci.Piastcode.Social.Entities.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Toci.Piastcode.Social.Entities\Toci.Piastcode.Social.Entities.csproj">
-      <Project>{77e05e9f-d76d-4af0-997c-e1a98455243b}</Project>
-      <Name>Toci.Piastcode.Social.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Toci.Piastcode.Social.Sockets.Interfaces\Toci.Piastcode.Social.Sockets.Interfaces.csproj">
-      <Project>{92306387-89e7-47e5-8253-e6f3b4f3e428}</Project>
-      <Name>Toci.Piastcode.Social.Sockets.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Toci.Piastcode.Social.Sockets\Toci.Piastcode.Social.Sockets.csproj">
-      <Project>{e18e9834-6f28-48b6-81c8-a7aa4cc365c1}</Project>
-      <Name>Toci.Piastcode.Social.Sockets</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
