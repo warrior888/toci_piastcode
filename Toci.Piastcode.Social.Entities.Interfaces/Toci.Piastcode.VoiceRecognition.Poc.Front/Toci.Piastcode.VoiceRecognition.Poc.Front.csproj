@@ -76,6 +76,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Toci.Piastcode.SpeechRecognition.Interfaces\Toci.Piastcode.SpeechRecognition.Interfaces.csproj">
+      <Project>{7247629d-acee-4164-93a4-68f8a8b2ed85}</Project>
+      <Name>Toci.Piastcode.SpeechRecognition.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.SpeechRecognition\Toci.Piastcode.SpeechRecognition.csproj">
+      <Project>{480b3504-6497-43d8-9f9f-ccbbc5f230c0}</Project>
+      <Name>Toci.Piastcode.SpeechRecognition</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Toci.Piastcode.VoiceRecognition.Poc\Toci.Piastcode.VoiceRecognition.Poc.csproj">
       <Project>{321ce322-e63e-4f4e-b87c-0b98756475a3}</Project>
       <Name>Toci.Piastcode.VoiceRecognition.Poc</Name>

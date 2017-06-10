@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Toci.Piastcode.SpeechRecognition.Entities;
 using Toci.Piastcode.VoiceRecognition.Poc.Audio2Text;
 
 namespace Toci.Piastcode.VoiceRecognition.Poc.Front
@@ -17,9 +19,16 @@ namespace Toci.Piastcode.VoiceRecognition.Poc.Front
         {
             InitializeComponent();
 
-            MicPoc poc = new MicPoc();
+            Toci.Piastcode.SpeechRecognition.Tools.SpeechRecognition spR = new SpeechRecognition.Tools.SpeechRecognition();
 
-            poc.ArbitrarySpeechRecognition();
+            spR.GrammarSource = new GrammarSource { FilePath = @"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.VoiceRecognition.Poc\data\grammar.xml" };
+
+            spR.Listen();
+            spR.RecognizeSpeech += s => Debug.WriteLine(s);
+
+            //MicPoc poc = new MicPoc();
+
+            //poc.ArbitrarySpeechRecognition();
             /*
             Button micStart = new Button();
             micStart.Text = "Start recording";

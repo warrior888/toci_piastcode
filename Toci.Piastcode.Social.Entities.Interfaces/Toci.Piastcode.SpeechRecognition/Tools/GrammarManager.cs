@@ -6,9 +6,9 @@ namespace Toci.Piastcode.SpeechRecognition.Tools
 {
     public class GrammarManager : IGrammarManager
     {
-        public Grammar GetGrammar(IGrammarSource grammarSource)
+        public virtual Grammar GetGrammar(IGrammarSource grammarSource)
         {
-            throw new System.NotImplementedException();
+            return new Grammar(grammarSource.FilePath);
         }
     }
 }

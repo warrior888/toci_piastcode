@@ -18,6 +18,7 @@ namespace Toci.Piastcode.SpeechRecognition.Tools
         {
             SREngine.SetInputToDefaultAudioDevice();
             SREngine.LoadGrammar(GrammarManager.GetGrammar(GrammarSource));
+            SREngine.RecognizeAsync(RecognizeMode.Multiple);
             SREngine.SpeechRecognized += SREngine_SpeechRecognized;
         }
 
