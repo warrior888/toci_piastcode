@@ -19,11 +19,10 @@ namespace Toci.Piastcode.Social.Sockets.Connection
 
         public override IFrame ReceiveData()
         {
-            Socket accepted = socket.Accept();
             IFrame frame = new Frame();
 
-            byte[] buffer = new byte[accepted.SendBufferSize];
-            int bytesRead = accepted.Receive(buffer);
+            byte[] buffer = new byte[socket.SendBufferSize];
+            int bytesRead = socket.Receive(buffer);
 
             byte[] formatted = new byte[bytesRead];
 
@@ -34,7 +33,7 @@ namespace Toci.Piastcode.Social.Sockets.Connection
 
             MemoryStream ms = new MemoryStream(formatted);
 
-            frame = Serializer.Deserialize<IFrame>(ms);
+            frame = Serializer.Deserialize<Frame>(ms);
 
             return frame;
         }
