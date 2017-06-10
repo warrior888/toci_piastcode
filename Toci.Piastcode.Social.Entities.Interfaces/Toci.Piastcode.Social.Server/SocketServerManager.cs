@@ -87,6 +87,8 @@ namespace Toci.Piastcode.Social.Server
                     {
                         item = Serializer.Deserialize<IItem>(ms);
 
+                        // Pseudo Logger 
+                        Console.WriteLine("Received data from " + client.Name + ", modificationType: " + item.ItemModificationType);
                         Map[item.ItemModificationType](item, client);
                     }
 
