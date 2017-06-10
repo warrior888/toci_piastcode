@@ -29,6 +29,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="protobuf-net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
       <HintPath>..\packages\protobuf-net.2.2.1\lib\net40\protobuf-net.dll</HintPath>
@@ -47,6 +53,10 @@
     <Compile Include="Connection\SocketFrameConnection.cs" />
     <Compile Include="Connection\SocketProjectConnection.cs" />
     <Compile Include="Connection\SocketUserConnection.cs" />
+    <Compile Include="Implementations\ProjectItem.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IProjectItem.cs" />
+    <Compile Include="Interfaces\ModificationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SocketBase.cs" />
     <Compile Include="SocketClientBase.cs" />
@@ -67,6 +77,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Key.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
