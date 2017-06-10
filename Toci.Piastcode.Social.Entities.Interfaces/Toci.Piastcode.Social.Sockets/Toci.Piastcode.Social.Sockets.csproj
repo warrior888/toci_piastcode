@@ -53,10 +53,6 @@
     <Compile Include="SocketServerBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Toci.Piastcode.Common\Toci.Piastcode.Common.csproj">
-      <Project>{702ef088-0685-452a-a300-27dd033b4aa6}</Project>
-      <Name>Toci.Piastcode.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj">
       <Project>{FC6670A4-5F00-401D-9C90-544BA5F4A46D}</Project>
       <Name>Toci.Piastcode.Social.Entities.Interfaces</Name>

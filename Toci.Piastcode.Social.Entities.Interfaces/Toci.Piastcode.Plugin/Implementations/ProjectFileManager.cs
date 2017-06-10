@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.Build.Evaluation;
-using Toci.Piastcode.Common.Interfaces;
 using Toci.Piastcode.Plugin.Interfaces;
+using Toci.Piastcode.Social.Client.Interfaces;
 
 namespace Toci.Piastcode.Plugin.Implementations
 {

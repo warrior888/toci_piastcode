@@ -1,4 +1,4 @@
-﻿using Toci.Piastcode.Common.Interfaces;
+﻿using Toci.Piastcode.Social.Client.Interfaces;
 
 namespace Toci.Piastcode.Plugin.Interfaces
 {

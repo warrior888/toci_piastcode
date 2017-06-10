@@ -1,7 +1,7 @@
 ﻿using ProtoBuf;
-using Toci.Piastcode.Common.Interfaces;
+using Toci.Piastcode.Social.Client.Interfaces;
 
-namespace Toci.Piastcode.Common.Implementations
+namespace Toci.Piastcode.Social.Client.Implementations
 {
     [ProtoContract]
     public class ProjectItem : IProjectItem

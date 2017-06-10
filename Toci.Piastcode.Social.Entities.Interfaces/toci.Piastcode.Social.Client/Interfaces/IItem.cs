@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Toci.Piastcode.Common.Interfaces
+﻿namespace Toci.Piastcode.Social.Client.Interfaces
 {
     public interface IItem
     {

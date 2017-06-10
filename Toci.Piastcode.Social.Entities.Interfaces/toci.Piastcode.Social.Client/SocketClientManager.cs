@@ -6,13 +6,12 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using ProtoBuf;
-using Toci.Piastcode.Common.Implementations;
-using Toci.Piastcode.Common.Interfaces;
+using Toci.Piastcode.Social.Client.Interfaces;
 using Toci.Piastcode.Social.Entities;
 using Toci.Piastcode.Social.Entities.Interfaces;
 using Toci.Piastcode.Social.Sockets;
 
-namespace toci.Piastcode.Social.Client
+namespace Toci.Piastcode.Social.Client
 {
     public class SocketClientManager : SocketClientBase
     {
@@ -133,6 +132,11 @@ namespace toci.Piastcode.Social.Client
             {
                 Console.WriteLine("Couldn't connect to the server, exception: " + ex);
             }
+        }
+
+        public void AddFile(Action<IProjectItem> action, IProjectItem projectItem)
+        {
+            action(projectItem);
         }
     }
 }
