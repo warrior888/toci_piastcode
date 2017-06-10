@@ -50,6 +50,7 @@
     <Compile Include="Entities\ITarget.cs" />
     <Compile Include="Handlers\IAddFileHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\IDeveloperCommandDriver.cs" />
     <Compile Include="Tools\IDeveloperCommandParser.cs" />
     <Compile Include="Tools\IDevInstructionHandler.cs" />
     <Compile Include="Tools\IParser.cs" />

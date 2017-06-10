@@ -21,7 +21,7 @@ namespace Toci.Piastcode.VoiceRecognition.Poc.Front
 
             Toci.Piastcode.SpeechRecognition.Tools.SpeechRecognition spR = new SpeechRecognition.Tools.SpeechRecognition();
 
-            spR.GrammarSource = new GrammarSource { FilePath = @"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.VoiceRecognition.Poc\data\grammar.xml" };
+            spR.GrammarSource = new GrammarSource { FilePath = @"Z:\Projects\TOCI_PiastCode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.VoiceRecognition.Poc\data\grammar.xml" };
 
             spR.Listen();
             spR.RecognizeSpeech += s => Debug.WriteLine(s);
