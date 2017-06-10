@@ -48,7 +48,7 @@ namespace Toci.Piastcode.Plugin
 
         protected virtual void AddFile()
         {
-            string filePath = @"..\..\..\..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\"+ System.Security.Principal.WindowsIdentity.GetCurrent().Name.Replace("\\", "") +".cs";
+            string filePath = System.Security.Principal.WindowsIdentity.GetCurrent().Name.Replace("\\", "") +".cs";
             string csProjPath = @"..\..\..\..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Toci.Piastcode.Tests.csproj";
             string fileContent = "public class GhostRider {}";
 
