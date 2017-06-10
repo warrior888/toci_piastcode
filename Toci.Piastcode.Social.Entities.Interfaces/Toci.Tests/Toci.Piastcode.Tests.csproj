@@ -50,13 +50,14 @@
   <ItemGroup>
     <Compile Include="InstructionTest\CreateFileTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerClientTests\ServerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toci.Piascode.Instructions.Interfacces\Toci.Piascode.Instructions.Interfaces.csproj">
-      <Project>{86782432-7656-499A-AA3F-D1BC8A90A81D}</Project>
+      <Project>{86782432-7656-499a-aa3f-d1bc8a90a81d}</Project>
       <Name>Toci.Piascode.Instructions.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Toci.Piastcode.Instructions\Toci.Piastcode.Instructions.csproj">
@@ -66,6 +67,14 @@
     <ProjectReference Include="..\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.Social.Entities.Interfaces.csproj">
       <Project>{fc6670a4-5f00-401d-9c90-544ba5f4a46d}</Project>
       <Name>Toci.Piastcode.Social.Entities.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.Social.Server.Interfaces\Toci.Piastcode.Social.Server.Interfaces.csproj">
+      <Project>{dfd722d9-1500-422d-b95f-cc301ab35fe8}</Project>
+      <Name>Toci.Piastcode.Social.Server.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.Social.Server\Toci.Piastcode.Social.Server.csproj">
+      <Project>{13bb3173-2bff-41e1-8b06-f73c4457b155}</Project>
+      <Name>Toci.Piastcode.Social.Server</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
