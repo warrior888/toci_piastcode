@@ -2,7 +2,7 @@
 
 namespace Toci.Piastcode.Instructions.Entities
 {
-    public class HandledInstruction : IHandledInstruction
+    public class HandledInstruction : DevHandledInstruction, IHandledInstruction
     {
         
     }

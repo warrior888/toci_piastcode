@@ -11,6 +11,7 @@ using Project = Microsoft.Build.Evaluation.Project;
 using Toci.Piastcode.Plugin.Implementations;
 using Toci.Piastcode.Plugin.Interfaces;
 using Toci.Piastcode.Social.Client;
+using Toci.Piastcode.Social.Client.Implementations;
 using Toci.Piastcode.Social.Client.Interfaces;
 
 namespace Toci.Piastcode.Plugin
@@ -19,14 +20,14 @@ namespace Toci.Piastcode.Plugin
     {
         protected IProjectFileManager fileManager = new ProjectFileManager();
 
-        //protected SocketClientManager scManager;
+        protected SocketClientManager scManager;
 
 
 
         public PluginWindow()
         {
 
-            SocketClientManager scManager = new SocketClientManager("192.168.0.55", 25016, new Dictionary<ModificationType, Action<IItem>>
+            scManager = new SocketClientManager("192.168.0.55", 25016, new Dictionary<ModificationType, Action<IItem>>
             {
                 {ModificationType.Add, (item) => fileManager.AddNewFile((IProjectItem)item)},
             });
@@ -42,12 +43,12 @@ namespace Toci.Piastcode.Plugin
             string csProjPath = @"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Toci.Piastcode.Tests.csproj";
             string fileContent = "public class whatever {}";
 
-            /*IProjectItem projItem = new ProjectItem(csProjPath, filePath, fileContent);
+            IProjectItem projItem = new ProjectItem(csProjPath, filePath, fileContent);
             projItem.ItemModificationType = ModificationType.Add;
             
             fileManager.AddNewFile(projItem);
 
-            scManager.BroadCastFile(projItem);*/
+            scManager.BroadCastFile(projItem);
         }
     }
 }

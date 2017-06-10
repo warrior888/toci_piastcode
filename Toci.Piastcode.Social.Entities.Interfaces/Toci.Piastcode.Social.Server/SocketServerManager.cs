@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using ProtoBuf;
-using Toci.Piastcode.Common.Interfaces;
+using Toci.Piastcode.Social.Client.Interfaces;
 using Toci.Piastcode.Social.Entities;
 using Toci.Piastcode.Social.Entities.Interfaces;
 using Toci.Piastcode.Social.Sockets;
@@ -127,7 +127,7 @@ namespace Toci.Piastcode.Social.Server
                 SocketUserConnection userConnection = new SocketUserConnection(accepted);
                 var user = userConnection.ReceiveData();
 
-                IClient client = new Client
+                IClient client = new Entities.Client
                 {
                     Name = user.Name,
                     socket = accepted,

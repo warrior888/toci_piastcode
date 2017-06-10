@@ -16,7 +16,7 @@ namespace Toci.Piastcode.VoiceRecognition.Poc.Audio2Text
         {
             SpeechRecognition sp = new SpeechRecognition();
 
-            StreamReader sr = new StreamReader(@"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.VoiceRecognition.Poc\data\grammar.xml");
+            StreamReader sr = new StreamReader(@"Z:\Projects\TOCI_PiastCode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Piastcode.VoiceRecognition.Poc\data\grammar.xml");
 
             GrammarBuilder builder = new GrammarBuilder();
 

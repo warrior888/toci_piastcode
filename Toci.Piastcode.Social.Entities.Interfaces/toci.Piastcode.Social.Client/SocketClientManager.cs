@@ -25,19 +25,6 @@ namespace Toci.Piastcode.Social.Client
         public void StartClient()
         {
             Task.Factory.StartNew(ListenForString);
-            while (true)
-            {
-                //Task<IFrame> task = new Task<IFrame>(ListenForFrame);
-                //task.Start();
-
-
-                socket.Send(Encoding.ASCII.GetBytes(Console.ReadLine()));
-                
-
-                //task.Wait();
-                // TODO: Do something with that frame
-                //var frame = task.Result;
-            }
         }
 
 
@@ -45,17 +32,27 @@ namespace Toci.Piastcode.Social.Client
         {
             while(true)
             { 
-            byte[] buffer = new byte[socket.SendBufferSize];
-            int bytesRead = socket.Receive(buffer);
+                byte[] buffer = new byte[socket.SendBufferSize];
+                int bytesRead = socket.Receive(buffer);
 
-            byte[] formatted = new byte[bytesRead];
+                byte[] formatted = new byte[bytesRead];
 
-            for (int i = 0; i < bytesRead; i++)
-            {
-                formatted[i] = buffer[i];
-            }
+                for (int i = 0; i < bytesRead; i++)
+                {
+                    formatted[i] = buffer[i];
+                }
 
-            Console.WriteLine(Encoding.ASCII.GetString(formatted));
+                IItem item;
+                using (MemoryStream ms = new MemoryStream(formatted))
+                {
+                    item = Serializer.Deserialize<IItem>(ms);
+
+
+                    if (item.ItemModificationType == ModificationType.Add)
+                    {
+                        AddFile(Map[ModificationType.Add], (IProjectItem)item);
+                    }
+                }
             }
         }
 
