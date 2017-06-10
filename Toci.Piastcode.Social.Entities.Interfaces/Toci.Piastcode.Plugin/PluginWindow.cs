@@ -11,6 +11,7 @@ using Project = Microsoft.Build.Evaluation.Project;
 using Toci.Piastcode.Plugin.Implementations;
 using Toci.Piastcode.Plugin.Interfaces;
 using Toci.Piastcode.Social.Client;
+using Toci.Piastcode.Social.Client.Interfaces;
 
 namespace Toci.Piastcode.Plugin
 {
@@ -25,17 +26,11 @@ namespace Toci.Piastcode.Plugin
         public PluginWindow()
         {
 
-            kurwa();
-        }
-
-        protected virtual void kurwa()
-        {
-            SocketClientManager scManager = new SocketClientManager("192.168.0.55", 25016, null);
-            /*new Dictionary<ModificationType, Action<IItem>>
+            SocketClientManager scManager = new SocketClientManager("192.168.0.55", 25016, new Dictionary<ModificationType, Action<IItem>>
             {
                 {ModificationType.Add, (item) => fileManager.AddNewFile((IProjectItem)item)},
             });
-            */
+
             scManager.StartClient();
 
             AddFile();
