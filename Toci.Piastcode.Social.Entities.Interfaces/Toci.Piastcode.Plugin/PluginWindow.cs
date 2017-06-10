@@ -43,7 +43,12 @@ namespace Toci.Piastcode.Plugin
             string csProjPath = @"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Toci.Piastcode.Tests.csproj";
             string fileContent = "public class whatever {}";
 
-            IProjectItem projItem = new ProjectItem(csProjPath, filePath, fileContent);
+            IProjectItem projItem = new ProjectItem
+            {
+                Content = fileContent,
+                FilePath = filePath,
+                ProjectPath = csProjPath,
+            };
             projItem.ItemModificationType = ModificationType.Add;
             
             fileManager.AddNewFile(projItem);

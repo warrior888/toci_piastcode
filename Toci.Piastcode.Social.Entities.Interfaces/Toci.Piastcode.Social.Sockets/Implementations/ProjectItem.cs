@@ -10,12 +10,7 @@ namespace Toci.Piastcode.Social.Client.Implementations
         private string _filePath;
         private string _content;
 
-        public ProjectItem(string projectPath,string filePath,string content)
-        {
-            _projectPath = projectPath;
-            _filePath = filePath;
-            _content = content;
-        }
+        
 
         [ProtoMember(1)]
        public string ProjectPath

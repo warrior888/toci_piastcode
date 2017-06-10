@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using ProtoBuf;
+using Toci.Piastcode.Social.Client.Implementations;
 using Toci.Piastcode.Social.Client.Interfaces;
 using Toci.Piastcode.Social.Entities;
 using Toci.Piastcode.Social.Entities.Interfaces;
@@ -85,7 +86,7 @@ namespace Toci.Piastcode.Social.Server
 
                     using (MemoryStream ms = new MemoryStream(formatted))
                     {
-                        item = Serializer.Deserialize<IItem>(ms);
+                        item = Serializer.Deserialize<ProjectItem>(ms);
 
                         // Pseudo Logger 
                         Console.WriteLine("Received data from " + client.Name + ", modificationType: " + item.ItemModificationType);
