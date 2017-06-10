@@ -178,7 +178,24 @@
       <ManifestResourceName>VSPackage</ManifestResourceName>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Toci.Piascode.Instructions.Interfacces\Toci.Piascode.Instructions.Interfaces.csproj">
+      <Project>{86782432-7656-499a-aa3f-d1bc8a90a81d}</Project>
+      <Name>Toci.Piascode.Instructions.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.Instructions\Toci.Piastcode.Instructions.csproj">
+      <Project>{db9da045-8767-442c-901d-f77d4f0c69e1}</Project>
+      <Name>Toci.Piastcode.Instructions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.SpeechRecognition.Interfaces\Toci.Piastcode.SpeechRecognition.Interfaces.csproj">
+      <Project>{7247629d-acee-4164-93a4-68f8a8b2ed85}</Project>
+      <Name>Toci.Piastcode.SpeechRecognition.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toci.Piastcode.SpeechRecognition\Toci.Piastcode.SpeechRecognition.csproj">
+      <Project>{480b3504-6497-43d8-9f9f-ccbbc5f230c0}</Project>
+      <Name>Toci.Piastcode.SpeechRecognition</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
