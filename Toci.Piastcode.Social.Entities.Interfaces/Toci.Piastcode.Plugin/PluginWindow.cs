@@ -1,11 +1,12 @@
 ﻿using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using EnvDTE;
 using Microsoft.Build.Construction;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Project = Microsoft.Build.Evaluation.Project;
+using Toci.Piastcode.Plugin.Interfaces;
+using Toci.Piastcode.Plugin.Implementations;
 
 namespace Toci.Piastcode.Plugin
 {
@@ -13,22 +14,22 @@ namespace Toci.Piastcode.Plugin
     {
         public PluginWindow()
         {
-            StreamWriter swr = new StreamWriter(@"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Yuriy.cs");
-            swr.Write("public class whatever {}");
-            swr.Close();
+            string filePath = @"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Yuriy.cs";
+            string csProjPath = @"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Toci.Piastcode.Tests.csproj";
+            string fileContent = "public class whatever {}";
+            //StreamWriter swr = new StreamWriter(filePath);
+            //swr.Write(fileContent);
+            //swr.Close();
 
-            IVsSolution solution = Package.GetGlobalService(typeof(DTE)) as IVsSolution;
-            
-            //DTE dte = (DTE)Marshal.GetActiveObject("VisualStudio.DTE.14.0");
-            //solution.Projects.Item(0).ProjectItems.AddFromFile(@"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Yuriy.cs");
+            //Project pr = new Project(csProjPath);            
 
-//            return;
-            Project pr = new Project(@"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Toci.Piastcode.Tests.csproj");            
+            //pr.AddItem("Compile", filePath);
+            //pr.Save();
 
-            pr.AddItem("Compile", @"C:\Users\bzapart\Documents\toci_piastcode\Toci.Piastcode.Social.Entities.Interfaces\Toci.Tests\Yuriy.cs");
-            pr.Save();
-
-            pr.ReevaluateIfNecessary();
+            //pr.ReevaluateIfNecessary();
+            IProjectItem projItem = new ProjectItem(csProjPath,filePath, fileContent);
+            IProjectFileManager fileManager = new ProjectFileManager();
+            fileManager.AddNewFile(projItem);
         }
     }
 }

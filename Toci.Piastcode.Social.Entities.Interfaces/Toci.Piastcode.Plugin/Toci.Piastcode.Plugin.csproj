@@ -50,6 +50,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Implementations\ProjectFileManager.cs" />
+    <Compile Include="Implementations\ProjectItem.cs" />
     <Compile Include="Interfaces\IProjectFileManager.cs" />
     <Compile Include="Interfaces\IProjectItem.cs" />
     <Compile Include="PluginWindow.cs">
@@ -176,9 +178,7 @@
       <ManifestResourceName>VSPackage</ManifestResourceName>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Implementations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
